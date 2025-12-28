@@ -1,43 +1,44 @@
-🚀 RISC-V ISA & Toolchain: Architectural Deep-Dive
-A comprehensive technical repository documenting the end-to-end flow of the RISC-V Instruction Set Architecture (ISA). This project covers the transition from high-level C programming to hardware implementation, focusing on Application Binary Interface (ABI) and RTL-level verification.
+# 🚀 RISC-V ISA & Toolchain: Architectural Deep-Dive
 
-🛠️ Technical Learning Path
-The workshop was structured into six critical stages of computer architecture development:
+An intensive technical repository documenting the end-to-end flow of the **RISC-V Instruction Set Architecture (ISA)**. This project tracks the progression from high-level C-based application development to low-level RTL verification.
 
-Task 1: C to Assembly Pipeline – Exploring the RISC-V GNU Toolchain (riscv64-unknown-elf-gcc) and analyzing object code via objdump.
+---
 
-Task 2: Integer & Floating Point ISA – Deep-dive into RV64I and RV64F instruction formats and register usage.
+## 🛠️ Tech Stack & Ecosystem
 
-Task 3: ABI & Function Calls – Implementing assembly functions that interface with C code using standard RISC-V calling conventions.
+| Category | Tools & Specifications |
+| :--- | :--- |
+| **ISA** | RISC-V (RV64IMAFDC) |
+| **Compiler** | RISC-V GNU Embedded Toolchain (`riscv64-unknown-elf-gcc`) |
+| **Simulation** | Icarus Verilog (`iverilog`) |
+| **Waveforms** | GTKWave |
+| **Environment** | Ubuntu/Linux |
 
-Task 4: Logic Synthesis & RTL – Understanding the digital logic gates required to execute specific instructions within a RISC-V core.
+---
 
-Task 5: Timing Analysis & Static Timing (STA) – Evaluating the performance and frequency limits of a custom RISC-V core.
+## 📑 Technical Learning Path
 
-Task 6: Final Verification – Running functional simulations of compiled C programs on the RISC-V core using iverilog and GTKWave.
+### 🔹 Software to Hardware Bridge
+* **C to Assembly Pipeline:** Compiled C programs into RISC-V object code and performed deep-dive analysis using `objdump`.
+* **ABI & Function Calls:** Implemented assembly functions using standard RISC-V calling conventions (register mapping for `a0-a7` and `s0-s11`).
 
-💻 Tech Stack & Tools
-ISA: RISC-V (RV64IMAFDC).
+### 🔹 Microarchitecture & RTL
+* **Logic Synthesis:** Analyzed the digital logic gate requirements for executing specific instructions within the core.
+* **Functional Verification:** Ran simulations of compiled binaries on a RISC-V core and verified timing via GTKWave.
+* **STA & Physical Design:** Exposure to Static Timing Analysis and the RTL-to-GDSII flow for silicon realization.
 
-Compiler: RISC-V GNU Embedded Toolchain.
+---
 
-Simulation: Icarus Verilog (iverilog).
+## 📈 Key Engineering Highlights
+* **Performance Benchmarking:** Analyzed instruction counts and clock cycles for high-level algorithms.
+* **Register Mastery:** Demonstrated precise control over argument passing and stack management in assembly.
+* **RTL-to-GDSII:** Gained foundational knowledge of physical design constraints and frequency limits in modern CPU cores.
 
-Waveform Analysis: GTKWave.
+---
 
-Operating System: Ubuntu/Linux environment.
-
-📊 Key Highlights
-Performance Benchmarking: Analyzed instruction counts and clock cycles for various C-algorithms (e.g., Sum of N numbers).
-
-Register Management: Mastered the use of a0-a7 for arguments and s0-s11 for saved registers in assembly.
-
-RTL-to-GDSII Flow: Exposure to the physical design constraints involved in bringing a RISC-V core to silicon.
-
-📂 Repository Structure
-Plaintext
-
-├── Task 1-6/      # Daily lab assignments and task solutions
-├── .gitignore     # Filters out simulation artifacts (.vcd, .out)
-├── LICENSE        # MIT Open Source License
-└── README.md      # Technical documentation
+## 📂 Repository Structure
+```text
+├── Task 1-6/       # Lab assignments and task solutions
+├── .gitignore      # Filters simulation artifacts (.vcd, .out)
+├── LICENSE         # MIT Open Source License
+└── README.md       # Project documentation
