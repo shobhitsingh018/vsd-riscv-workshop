@@ -1,1 +1,9 @@
+# Simulation outputs
+*.vcd
+*.out
+*.log
 
+# RISC-V Toolchain artifacts (if any local builds happened)
+*.o
+*.elf
+*.bin
